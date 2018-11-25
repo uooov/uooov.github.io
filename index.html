@@ -66,6 +66,86 @@
       <div class="outer">
         <section id="main">
   
+    <article id="post-Javascript笔记" class="article article-type-post" itemscope="" itemprop="blogPost">
+  <div class="article-meta">
+    <a href="/2018/11/25/Javascript笔记/" class="article-date">
+  <time datetime="2018-11-25T10:50:18.000Z" itemprop="datePublished">2018-11-25</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/11/25/Javascript笔记/">Javascript笔记</a>
+    </h1>
+  
+
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>#Javascript</p>
+<p>##创建对象的三种方式<br>1.字面量方式<br><code>var per1={
+name:&#39;卡卡西&#39;,
+age:20,
+sex:&#39;男&#39;,
+eat:function(){
+console.log(&#39;吃臭豆腐&#39;)
+},
+readBook:function(){
+console.log(&#39;亲热天堂&#39;)
+}
+};</code><br>2.调用系统的构造函数<br><code>var per2 = new Object();
+per2.name=&quot;大蛇丸&quot;;
+per2.age=&quot;30&quot;;
+per2.sex=&quot;男&quot;;
+per2.eat=function(){
+console.log(&quot;吃榴莲&quot;)
+};
+per2.play=function(){
+console.log(&quot;玩蛇&quot;)
+};</code><br>//以上两种方式创建的对象都不能确定属于什么类型，例如 var dog = new Object(),狗和人都属于object类型。<br>3.自定义构造函数方式<br><code>function person(name,age,sex){
+this.name=name;this.age=age&gt;
+this.play=function(){
+console.log(&quot;天天打游戏&quot;)
+};
+}
+var per=new Person(&quot;鸣人&quot;,18,&quot;男&quot;)
+console.log(per instanceof Person)
+返回 true</code></p>
+<p>#工厂模式和自定义构造函数的区别<br>`<br>function Person(name,age){<br>this.name=name;this.age=age;<br>this.sayhi=function(){<br>console.log(“hi”)<br>}<br>}<br>//创建对象—-&gt;实例化一个对象的同时对属性进行初始化<br>/<em>1.开辟空间储存对象<br>    2.把this设置为当前的对象<br>        3.设置属性和方法的值<br>            4.把this对象返回
+</em>/</p>
+<p>`</p>
+<p>##工厂模式创建对象<br><code>function createObject(name,age){
+ var obj=new object();
+ obj.name=name;obj.age=age;
+ obj.saihi=function(){
+console.log(&#39;hi&#39;)
+};
+return obj
+}
+var per1 = new Person(&quot;自来也&quot;,50) //自定义构造函数
+var per2 = createObject(&quot;佐助&quot;,18); //工厂模式</code><br>/*<br>共同点：都可以创建对象，都可以传入参数<br>工厂模式：函数名是小写<br>工厂模式里面有new关键字和返回值<br>new之后的对象是当前的对象<br>直接调用函数就可以创建对象</p>
+<p>自定义构造函数：函数名是大写（首字母）<br>没有new，返回值<br>this是当前的对象<br>通过new的方式创建对象 </p>
+<p>大多数情况下用自定义构造函数的方式<br>*/</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://yoursite.com/2018/11/25/Javascript笔记/" data-id="cjowrjxf10000pcv5njb1zpjn" class="article-share-link">Share</a>
+      
+      
+    </footer>
+  </div>
+  
+</article>
+
+
+  
     <article id="post-鲁迅" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
     <a href="/2018/11/18/鲁迅/" class="article-date">
@@ -93,7 +173,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/18/鲁迅/" data-id="cjomq166j0002nov5oj6s8zxq" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/18/鲁迅/" data-id="cjowrjxi60003pcv5l8o03yc1" class="article-share-link">Share</a>
       
       
     </footer>
@@ -141,7 +221,7 @@ var vm = new Vue({
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/18/Vue学习笔记（一）/" data-id="cjomq16640000nov54hnr4rqo" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/18/Vue学习笔记（一）/" data-id="cjowrjxi30002pcv5ijjewxqu" class="article-share-link">Share</a>
       
       
     </footer>
@@ -178,7 +258,7 @@ var vm = new Vue({
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/18/登月计划/" data-id="cjomq166g0001nov5omjhk1iy" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/18/登月计划/" data-id="cjowrjxi10001pcv51lsnl7of" class="article-share-link">Share</a>
       
       
     </footer>
@@ -217,6 +297,10 @@ var vm = new Vue({
     <h3 class="widget-title">最新文章</h3>
     <div class="widget">
       <ul>
+        
+          <li>
+            <a href="/2018/11/25/Javascript笔记/">Javascript笔记</a>
+          </li>
         
           <li>
             <a href="/2018/11/18/鲁迅/">鲁迅</a>

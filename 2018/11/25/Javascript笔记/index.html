@@ -5,19 +5,19 @@
   
 
   
-  <title>Vue学习笔记（一） | 登月计划</title>
+  <title>Javascript笔记 | 登月计划</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="//创建Vue实例html: &amp;#39;&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;#39; js: var vm = new Vue({     el:&amp;quot;app&amp;quot;,     data:{         msg:&amp;quot;vue.js&amp;quot;  /*数据*/     },     methods:{            /*写">
+  <meta name="description" content="#Javascript ##创建对象的三种方式1.字面量方式var per1={ name:&amp;#39;卡卡西&amp;#39;, age:20, sex:&amp;#39;男&amp;#39;, eat:function(){ console.log(&amp;#39;吃臭豆腐&amp;#39;) }, readBook:function(){ console.log(&amp;#39;亲热天堂&amp;#39;) } };2.调用系统的构造函数var">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Vue学习笔记（一）">
-<meta property="og:url" content="http://yoursite.com/2018/11/18/Vue学习笔记（一）/index.html">
+<meta property="og:title" content="Javascript笔记">
+<meta property="og:url" content="http://yoursite.com/2018/11/25/Javascript笔记/index.html">
 <meta property="og:site_name" content="登月计划">
-<meta property="og:description" content="//创建Vue实例html: &amp;#39;&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;#39; js: var vm = new Vue({     el:&amp;quot;app&amp;quot;,     data:{         msg:&amp;quot;vue.js&amp;quot;  /*数据*/     },     methods:{            /*写">
+<meta property="og:description" content="#Javascript ##创建对象的三种方式1.字面量方式var per1={ name:&amp;#39;卡卡西&amp;#39;, age:20, sex:&amp;#39;男&amp;#39;, eat:function(){ console.log(&amp;#39;吃臭豆腐&amp;#39;) }, readBook:function(){ console.log(&amp;#39;亲热天堂&amp;#39;) } };2.调用系统的构造函数var">
 <meta property="og:locale" content="zh-CN">
-<meta property="og:updated_time" content="2018-11-19T15:43:04.059Z">
+<meta property="og:updated_time" content="2018-11-25T10:51:14.534Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vue学习笔记（一）">
-<meta name="twitter:description" content="//创建Vue实例html: &amp;#39;&amp;lt;div id=&amp;quot;app&amp;quot;&amp;gt;&amp;lt;/div&amp;gt;&amp;#39; js: var vm = new Vue({     el:&amp;quot;app&amp;quot;,     data:{         msg:&amp;quot;vue.js&amp;quot;  /*数据*/     },     methods:{            /*写">
+<meta name="twitter:title" content="Javascript笔记">
+<meta name="twitter:description" content="#Javascript ##创建对象的三种方式1.字面量方式var per1={ name:&amp;#39;卡卡西&amp;#39;, age:20, sex:&amp;#39;男&amp;#39;, eat:function(){ console.log(&amp;#39;吃臭豆腐&amp;#39;) }, readBook:function(){ console.log(&amp;#39;亲热天堂&amp;#39;) } };2.调用系统的构造函数var">
   
     <link rel="alternate" href="/atom.xml" title="登月计划" type="application/atom+xml">
   
@@ -68,10 +68,10 @@
   </div>
 </header>
       <div class="outer">
-        <section id="main"><article id="post-Vue学习笔记（一）" class="article article-type-post" itemscope="" itemprop="blogPost">
+        <section id="main"><article id="post-Javascript笔记" class="article article-type-post" itemscope="" itemprop="blogPost">
   <div class="article-meta">
-    <a href="/2018/11/18/Vue学习笔记（一）/" class="article-date">
-  <time datetime="2018-11-18T08:01:52.000Z" itemprop="datePublished">2018-11-18</time>
+    <a href="/2018/11/25/Javascript笔记/" class="article-date">
+  <time datetime="2018-11-25T10:50:18.000Z" itemprop="datePublished">2018-11-25</time>
 </a>
     
   </div>
@@ -82,7 +82,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Vue学习笔记（一）
+      Javascript笔记
     </h1>
   
 
@@ -90,23 +90,55 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>//创建Vue实例<br><code>html:
-&#39;&lt;div id=&quot;app&quot;&gt;&lt;/div&gt;&#39;
-js:
-var vm = new Vue({
-    el:&quot;app&quot;,
-    data:{
-        msg:&quot;vue.js&quot;  /*数据*/
-    },
-    methods:{
-           /*写函数的地方*/
-    }
-})</code></p>
+        <p>#Javascript</p>
+<p>##创建对象的三种方式<br>1.字面量方式<br><code>var per1={
+name:&#39;卡卡西&#39;,
+age:20,
+sex:&#39;男&#39;,
+eat:function(){
+console.log(&#39;吃臭豆腐&#39;)
+},
+readBook:function(){
+console.log(&#39;亲热天堂&#39;)
+}
+};</code><br>2.调用系统的构造函数<br><code>var per2 = new Object();
+per2.name=&quot;大蛇丸&quot;;
+per2.age=&quot;30&quot;;
+per2.sex=&quot;男&quot;;
+per2.eat=function(){
+console.log(&quot;吃榴莲&quot;)
+};
+per2.play=function(){
+console.log(&quot;玩蛇&quot;)
+};</code><br>//以上两种方式创建的对象都不能确定属于什么类型，例如 var dog = new Object(),狗和人都属于object类型。<br>3.自定义构造函数方式<br><code>function person(name,age,sex){
+this.name=name;this.age=age&gt;
+this.play=function(){
+console.log(&quot;天天打游戏&quot;)
+};
+}
+var per=new Person(&quot;鸣人&quot;,18,&quot;男&quot;)
+console.log(per instanceof Person)
+返回 true</code></p>
+<p>#工厂模式和自定义构造函数的区别<br>`<br>function Person(name,age){<br>this.name=name;this.age=age;<br>this.sayhi=function(){<br>console.log(“hi”)<br>}<br>}<br>//创建对象—-&gt;实例化一个对象的同时对属性进行初始化<br>/<em>1.开辟空间储存对象<br>    2.把this设置为当前的对象<br>        3.设置属性和方法的值<br>            4.把this对象返回
+</em>/</p>
+<p>`</p>
+<p>##工厂模式创建对象<br><code>function createObject(name,age){
+ var obj=new object();
+ obj.name=name;obj.age=age;
+ obj.saihi=function(){
+console.log(&#39;hi&#39;)
+};
+return obj
+}
+var per1 = new Person(&quot;自来也&quot;,50) //自定义构造函数
+var per2 = createObject(&quot;佐助&quot;,18); //工厂模式</code><br>/*<br>共同点：都可以创建对象，都可以传入参数<br>工厂模式：函数名是小写<br>工厂模式里面有new关键字和返回值<br>new之后的对象是当前的对象<br>直接调用函数就可以创建对象</p>
+<p>自定义构造函数：函数名是大写（首字母）<br>没有new，返回值<br>this是当前的对象<br>通过new的方式创建对象 </p>
+<p>大多数情况下用自定义构造函数的方式<br>*/</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://yoursite.com/2018/11/18/Vue学习笔记（一）/" data-id="cjowrjxi30002pcv5ijjewxqu" class="article-share-link">Share</a>
+      <a data-url="http://yoursite.com/2018/11/25/Javascript笔记/" data-id="cjowrjxf10000pcv5njb1zpjn" class="article-share-link">Share</a>
       
       
     </footer>
@@ -115,19 +147,10 @@ var vm = new Vue({
     
 <nav id="article-nav">
   
-    <a href="/2018/11/18/鲁迅/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption">Newer</strong>
-      <div class="article-nav-title">
-        
-          鲁迅
-        
-      </div>
-    </a>
   
-  
-    <a href="/2018/11/18/登月计划/" id="article-nav-older" class="article-nav-link-wrap">
+    <a href="/2018/11/18/鲁迅/" id="article-nav-older" class="article-nav-link-wrap">
       <strong class="article-nav-caption">Older</strong>
-      <div class="article-nav-title">登月计划</div>
+      <div class="article-nav-title">鲁迅</div>
     </a>
   
 </nav>
